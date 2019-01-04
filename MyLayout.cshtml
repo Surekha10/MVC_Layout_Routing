@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>@Page.Title</title>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Styles.Render("~/Content/css")
+        @RenderSection("head", required: false)
+    </head>
+    <body>
+      <div align="center">
+          <table class="table" style="width:80%;text-align:center;">
+              <thead>
+                  <tr>
+                      <td colspan="6">
+                          Welcome to MVC Application <br/>@DateTime.Now
+                      </td>
+                  </tr>
+                  <tr>
+                      <td colspan="6">User ID : </td>
+                  </tr>
+                  <tr>
+                      <td>@Html.ActionLink("Home","Index","Home")</td>
+                      <td>@Html.ActionLink("Home", "Index", "Home")</td>
+                      <td>@Html.ActionLink("Home", "Index", "Home")</td>
+                      <td>@Html.ActionLink("Home", "Index", "Home")</td>
+                      <td>@Html.ActionLink("Home", "Index", "Home")</td>
+                      <td>@Html.ActionLink("Home", "Index", "Home")</td>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td colspan="6">@RenderBody()</td>
+                  </tr>
+              </tbody>
+              <tfoot>
+                  <tr>
+                      <td colspan="3" style="text-align:left;">CopyRight Info</td>
+                      <td colspan="3" style="text-align:right;">Developed By : Mounika</td>
+
+                  </tr>
+              </tfoot>
+          </table>
+      </div>
+    </body>
+</html>
